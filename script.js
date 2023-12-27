@@ -52,9 +52,9 @@ const animate = () => {
   for (let i = 0; i < explosions.length; i++) {
     explosions[i].update();
     explosions[i].draw();
-    // if (explosions[i].frame > 7) {
-    //   explosions.splice(i, 1);
-    // }
+    if (explosions[i].frame > 5) {
+      explosions.splice(i, 1);
+    }
   }
   requestAnimationFrame(animate);
 };
